@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WiFi Card Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>WiFi Card Generator</h1>
+      <div class="wifi-form">
+        <form id="wifi-form">
+          <label for="ssid">WiFi Network Name (SSID):</label>
+          <input type="text" id="ssid" placeholder="Enter SSID" required />
+
+          <label for="password">WiFi Password:</label>
+          <input type="password" id="password" placeholder="Enter Password" />
+
+          <label for="encryption">Encryption:</label>
+          <select id="encryption">
+            <option value="WPA">WPA/WPA2</option>
+            <option value="WEP">WEP</option>
+            <option value="nopass">None</option>
+          </select>
+
+          <button type="submit" id="generate">Generate QR Code</button>
+        </form>
+      </div>
+
+      <div id="qr-container" class="qr-container">
+        <h2>Scan this QR to connect</h2>
+        <div id="qrcode"></div>
+      </div>
+    </div>
+    <div class="theme-switch">
+      <label for="theme-switch">Dark Mode</label>
+      <input type="checkbox" id="theme-switch" />
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

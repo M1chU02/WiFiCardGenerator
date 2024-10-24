@@ -1,0 +1,99 @@
+:root {
+  --background-color: #f4f4f4;
+  --text-color: #000000;
+  --container-bg: #ffffff;
+  --container-shadow: rgba(0, 0, 0, 0.1);
+  --button-bg: #007bff;
+  --button-hover: #0056b3;
+  --select-bg: #ffffff;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  background: var(--container-bg);
+  padding: 30px;
+  box-shadow: 0 4px 8px var(--container-shadow);
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: var(--select-bg);
+  color: var(--text-color);
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#qr-container {
+  margin-top: 20px;
+}
+
+canvas {
+  margin-top: 10px;
+}
+
+.dark-mode {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --container-bg: #1e1e1e;
+  --container-shadow: rgba(255, 255, 255, 0.1);
+  --button-bg: #0056b3;
+  --button-hover: #003d82;
+  --select-bg: #1f1e1e;
+}
+
+.mode-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--button-bg);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.mode-toggle:hover {
+  background: var(--button-hover);
+}
